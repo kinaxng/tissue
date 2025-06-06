@@ -1,6 +1,6 @@
 import {Space} from "antd";
-import UserInfo from "./-components /info.tsx";
-import UserList from "./-components /user.tsx";
+import UserInfo from "./-components/info.tsx";
+import UserList from "./-components/user.tsx";
 import {useSelector} from "react-redux";
 import {RootState} from "../../../models";
 import {createFileRoute} from "@tanstack/react-router";
