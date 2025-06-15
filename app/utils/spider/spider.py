@@ -25,7 +25,7 @@ class Spider:
         self.setting = Setting().app
         self.session = Session()
         self.session.headers = {'User-Agent': self.setting.user_agent, 'Referer': self.host}
-        self.session.timeout = (5, self.session.timeout)
+        self.session.timeout = (self.setting.timeout, self.setting.timeout)
 
     @abstractmethod
     def get_info(self, num: str, url: str = None, include_downloads: bool = False, include_previews: bool = False):

@@ -171,6 +171,7 @@ class VideoService(BaseService):
             exist_path, _ = os.path.split(path)
             for item in ['poster', 'thumb', 'fanart']:
                 image = getattr(exist, item)
-                image_path = os.path.join(exist_path, image)
-                if os.path.exists(image_path):
-                    os.remove(image_path)
+                if image:
+                    image_path = os.path.join(exist_path, image)
+                    if os.path.exists(image_path):
+                        os.remove(image_path)
